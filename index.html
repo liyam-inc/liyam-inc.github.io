@@ -27,7 +27,7 @@
     justify-content:center;
     align-items:center;
     text-align:center;
-    font-size:24px;
+    font-size:28px;
     z-index:999;
     cursor:pointer;
     flex-direction:column;
@@ -56,7 +56,7 @@
   🎵 Tap anywhere to start music 🎵
 </div>
 
-<!-- Main Valentine card -->
+<!-- Valentine card -->
 <div class="card" id="valentineCard">
   <h1>Be My Valentine 💘</h1>
   <img src="https://media.tenor.com/2roX3uxz_68AAAAC/bear-cute.gif" class="bear"/>
@@ -73,10 +73,12 @@
 <script>
 const overlay = document.getElementById('startOverlay');
 const card = document.getElementById('valentineCard');
+
 overlay.addEventListener('click', ()=>{
-  overlay.style.display = 'none';
-  card.style.display = 'block';
-  document.getElementById('music').style.display = 'block';
+  overlay.style.display = 'none'; // hide overlay
+  card.style.display = 'block';   // show card
+  document.getElementById('music').style.display = 'block'; // show music
+  // Start YouTube music
   document.getElementById('ytPlayer').src = "https://www.youtube.com/embed/Hn-enjcgV1o?autoplay=1";
 });
 
